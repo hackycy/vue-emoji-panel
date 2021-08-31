@@ -14,7 +14,7 @@
 | emojis         | 表情图片数组，单个对象需具有`src`、`name`属性             | `Array<Object>`           |                |
 | recently-used  | 是否开启记录最近使用的表情                                | Boolean                   | true           |
 | visible        | 是否显示 `emoji popover`，支持 `.sync` 修饰符             | Boolean                   | false          |
-| transition     | 定义渐变动画                                              | String                    | fade-in-linear |
+| transition     | 定义渐变动画                                              | String                    | ep-fade-in-linear |
 | emoji-class    | 为`emoji-popover`指定类名                                 | String                    |                |
 | placement      | 指定出现的位置，仅支持 `top / bottom`                     | String                    | top            |
 | append-to-body | 自身是否插入至 body 元素上                                | Boolean                   | true           |
