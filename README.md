@@ -8,7 +8,7 @@
 | -------------- | --------------------------------------------------------- | ------------------------- | -------------- |
 | width          | 指定表情弹出框的宽度                                      | Number                    | 410            |
 | content-height | 指定表情弹出框**内容区域**的高度                          | Number                    | 270            |
-| item-size      | 指定单个表情的大小（正方形）                              | Number                    | 28             |
+| size           | 指定单个表情的大小（正方形）                              | Number                    | 28             |
 | gutter         | 指定表情间的间隔，支持数组指定上、右、下、左形式          | Number \| `Array<Number>` | 10             |
 | unit           | 指定`width、height、itemSize、gutter`等像素类型属性的单位 | String                    | px             |
 | emojis         | 表情图片数组，单个对象需具有`src`、`name`属性             | `Array<Object>`           |                |
