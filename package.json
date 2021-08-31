@@ -4,6 +4,7 @@
   "scripts": {
     "demo": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name EmojiPopover lib/index.js",
+    "prebuild": "rimraf dist",
     "lint": "vue-cli-service lint src examples",
     "inspect": "vue inspect > webpack-config.txt"
   },
@@ -11,20 +12,21 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "vue": "^2.6.11",
-    "core-js": "^3.6.5",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
