@@ -2,8 +2,8 @@
   "name": "vue-emoji-popover",
   "version": "0.0.1",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "demo": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name EmojiPopover src/index.js",
     "lint": "vue-cli-service lint src examples"
   },
   "peerDependencies": {
