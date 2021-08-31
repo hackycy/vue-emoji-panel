@@ -1,7 +1,5 @@
 .DS_Store
 node_modules
-/dist
-
 
 # local env files
 .env.local
@@ -25,3 +23,6 @@ pnpm-debug.log*
 # lock
 package-lock.json
 yarn.lock
+
+# vue inspect
+webpack-config.txt

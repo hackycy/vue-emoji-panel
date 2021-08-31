@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "demo": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name EmojiPopover src/index.js",
-    "lint": "vue-cli-service lint src examples"
+    "build": "vue-cli-service build --target lib --name EmojiPopover lib/index.js",
+    "lint": "vue-cli-service lint src examples",
+    "inspect": "vue inspect > webpack-config.txt"
   },
   "peerDependencies": {
     "vue": "^2.5.17"

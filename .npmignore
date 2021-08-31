@@ -1,3 +1,13 @@
 public/
 examples
 *.map
+webpack-config.txt
+
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
