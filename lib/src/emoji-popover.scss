@@ -1,0 +1,9 @@
+.ep-fade-in-linear-enter-active,
+.ep-fade-in-linear-leave-active {
+  transition: opacity 200ms linear;
+}
+.ep-fade-in-linear-enter,
+.ep-fade-in-linear-leave,
+.ep-fade-in-linear-leave-active {
+  opacity: 0;
+}
