@@ -13,24 +13,20 @@ export default {
       required: true
     },
     width: {
-      type: Number,
+      type: [Number, String],
       default: 410
     },
     contentHeight: {
-      type: Number,
+      type: [Number, String],
       default: 270
     },
     size: {
-      type: Number,
+      type: [Number, String],
       default: 28
     },
     gutter: {
-      type:  [Number, Array],
+      type: [Number, String],
       default: 10
-    },
-    unit: {
-      type: String,
-      default: 'px'
     },
     recentlyUsed: {
       type: Boolean,
@@ -57,7 +53,7 @@ export default {
       default: true
     },
     offset: {
-      type: Number,
+      type: [Number, String],
       default: 0
     },
     visibleArrow: {
@@ -65,7 +61,7 @@ export default {
       default: true
     },
     arrowSize: {
-      type: Number,
+      type: [Number, String],
       default: 8
     }
   }
