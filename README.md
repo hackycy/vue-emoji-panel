@@ -15,11 +15,9 @@
 | visible        | 是否显示 `emoji popover`，支持 `.sync` 修饰符             | Boolean                   | false          |
 | transition     | 定义渐变动画                                              | String                    | ep-fade-in-linear |
 | emoji-class    | 为`emoji-popover`指定类名                                 | String                    |                |
-| placement      | 指定出现的位置，仅支持 `top/top-start/top-end/bottom/bottom-start/bottom-end`            | String                    | top            |
+| placement      | 指定出现的位置，仅支持 `top/bottom`            | String                    | top            |
 | append-to-body | 自身是否插入至 body 元素上                                | Boolean                   | true           |
 | offset         | 出现位置的偏移量（相对于左边），数值类型则默认单位为px               | Number                    | 0              |
-| visible-arrow  | 是否显示 Tooltip 箭头                                     | Boolean                   | true           |
-| arrow-size     | Tooltip 箭头大小，数值类型则默认单位为px                             | Number, String            | 8              |
 
 ## 组件事件
 

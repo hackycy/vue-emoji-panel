@@ -7,3 +7,27 @@
 .ep-fade-in-linear-leave-active {
   opacity: 0;
 }
+
+$border-color: #ebeef5;
+
+.emoji-popover {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  padding: 4px;
+  overflow: hidden;
+  z-index: 2000;
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+
+  &__reference {
+    &:focus:not(.focusing), &:focus:hover {
+      outline-width: 0;
+    }
+  }
+
+  &:focus:active, &:focus {
+    outline-width: 0;
+  }
+}

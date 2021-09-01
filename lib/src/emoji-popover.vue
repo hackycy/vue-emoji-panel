@@ -1,10 +1,26 @@
 <template>
-  <transition :name="transition">
-    <!-- -->
-  </transition>
+  <span>
+    <transition :name="transition">
+      <div
+        class="emoji-popover"
+        :class="[emojiClass]"
+        :style="{ width: realWidth, '--arrow-size': realArrowSize }"
+      >
+        <!-- emoji pane -->
+      </div>
+    </transition>
+    <span
+      ref="wrapper"
+      class="emoji-popover__reference-wrapper"
+    >
+      <slot name="reference" />
+    </span>
+  </span>
 </template>
 
 <script>
+import { isString, DEFAULT_UNIT } from 'emoji-popover/utils'
+
 export default {
   name: 'EmojiPopover',
   props: {
@@ -46,7 +62,12 @@ export default {
     },
     placement: {
       type: String,
-      default: 'top'
+      default: 'top',
+      validator: (value) =>
+        [
+          'top',
+          'bottom'
+        ].indexOf(value) > -1
     },
     appendToBody: {
       type: Boolean,
@@ -55,14 +76,49 @@ export default {
     offset: {
       type: [Number, String],
       default: 0
+    }
+  },
+  computed: {
+    realWidth() {
+      if (isString(this.width)) {
+        return this.width
+      }
+      return `${this.width}${DEFAULT_UNIT}`
     },
-    visibleArrow: {
-      type: Boolean,
-      default: true
+    realContentHeight() {
+      if (isString(this.contentHeight)) {
+        return this.contentHeight
+      }
+      return `${this.contentHeight}${DEFAULT_UNIT}`
     },
-    arrowSize: {
-      type: [Number, String],
-      default: 8
+    realSize() {
+      if (isString(this.size)) {
+        return this.size
+      }
+      return `${this.size}${DEFAULT_UNIT}`
+    },
+    realGutter() {
+      if (isString(this.gutter)) {
+        return this.gutter
+      }
+      return `${this.gutter}${DEFAULT_UNIT}`
+    },
+    realOffset() {
+      if (isString(this.offset)) {
+        return this.offset
+      }
+      return `${this.offset}${DEFAULT_UNIT}`
+    }
+  },
+  mounted() {
+    let reference = this.referenceElm
+    if (!reference && this.$refs.wrapper.children) {
+      reference = this.referenceElm = this.$refs.wrapper.children[0]
+    }
+
+    // 是否可以访问
+    if (!reference) {
+      return
     }
   }
 }
