@@ -34,7 +34,7 @@
 
 | 参数    | 说明           |
 | :------ | :------------- |
-| default | 自定义Item显示 |
+| reference | 触发 Emoji Popover 显示的 HTML 元素 |
 
 # 参考资料
 
