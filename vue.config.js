@@ -7,7 +7,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const libSrc = resolve('lib')
+const libSrc = resolve('lib/src')
 
 module.exports = {
   pages: {

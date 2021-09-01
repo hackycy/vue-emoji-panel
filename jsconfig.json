@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "paths": {
         "@/*": ["examples/*"],
-        "emoji-popover/*": ["lib/*"]
+        "emoji-popover/*": ["lib/src/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
