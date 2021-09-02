@@ -1,6 +1,6 @@
-# vue-emoji-popover
+# vue-emoji-panel
 
-一个基于Vue2编写的表情弹出框组件
+一个基于Vue2编写的表情选择面板组件
 
 ## 组件属性
 
@@ -12,12 +12,7 @@
 | gutter         | 指定表情间的间隔 | Number | 10             |
 | emojis         | 表情图片数组，单个对象需具有`src`、`name`属性             | Array           |                |
 | recently-used  | 是否开启记录最近使用的表情                                | Boolean                   | true           |
-| visible        | 是否显示 `emoji popover`，支持 `.sync` 修饰符             | Boolean                   | false          |
-| transition     | 定义渐变动画                                              | String                    | ep-fade-in-linear |
 | emoji-class    | 为`emoji-popover`指定类名                                 | String                    |                |
-| placement      | 指定出现的位置，仅支持 `top/bottom`            | String                    | top            |
-| append-to-body | 自身是否插入至 body 元素上                                | Boolean                   | true           |
-| offset         | 出现位置的偏移量               | Number                    | 0              |
 | unit | 用于`width`、`size`等具有长度性质的单位 | String | px |
 
 ## 组件事件
@@ -25,14 +20,6 @@
 | 参数        | 说明             | 回调参数    |
 | ----------- | ---------------- | ----------- |
 | emoji-click | 表情被选中时触发 | item, index |
-| show        | 显示时触发       |             |
-| hide        | 隐藏时触发       |             |
-
-## 组件插槽
-
-| 参数    | 说明           |
-| :------ | :------------- |
-| reference | 触发 Emoji Popover 显示的 HTML 元素 |
 
 # 参考资料
 

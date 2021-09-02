@@ -4,22 +4,39 @@
       alt="Vue logo"
       src="./assets/logo.png"
     >
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <br>
+    <emoji-panel
+      :visible="visible"
+      :emojis="emojis"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      visible: false,
+      emojis: []
+    }
+  },
+  methods: {
+    handleClick() {
+      this.visible = !this.visible
+    }
   }
 }
 </script>
 
 <style lang="scss">
+// reset
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

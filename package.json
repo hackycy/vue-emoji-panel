@@ -1,9 +1,9 @@
 {
-  "name": "vue-emoji-popover",
+  "name": "vue-emoji-panel",
   "version": "0.0.1",
   "scripts": {
     "demo": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name EmojiPopover lib/index.js",
+    "build": "vue-cli-service build --target lib --name EmojiPanel lib/index.js",
     "prebuild": "rimraf dist",
     "lint": "vue-cli-service lint src examples",
     "inspect": "vue inspect > webpack-config.txt"
@@ -12,6 +12,7 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.9.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",

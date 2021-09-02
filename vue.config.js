@@ -25,7 +25,7 @@ module.exports = {
     resolve: {
       alias: {
         '@': resolve('examples'),
-        'emoji-popover': libSrc
+        'emoji-panel': libSrc
       }
     }
   },
