@@ -49,11 +49,6 @@ export default {
       default: 'px'
     }
   },
-  data() {
-    return {
-      instance: null
-    }
-  },
   computed: {
     realWidth() {
       return `${this.width}${this.unit}`
@@ -66,9 +61,6 @@ export default {
     },
     realGutter() {
       return `${this.gutter}${this.unit}`
-    },
-    realOffset() {
-      return `${this.offset}${this.unit}`
     }
   }
 }
