@@ -8,6 +8,7 @@
     <emoji-panel
       :visible="visible"
       :emojis="emojis"
+      emoji-class="demo-emoji"
     />
   </div>
 </template>
@@ -44,5 +45,9 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .demo-emoji {
+    margin: auto;
+  }
 }
 </style>
