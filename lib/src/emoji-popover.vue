@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import { isString, DEFAULT_UNIT } from 'emoji-popover/utils'
-
 export default {
   name: 'EmojiPopover',
   props: {
@@ -84,34 +82,19 @@ export default {
   },
   computed: {
     realWidth() {
-      if (isString(this.width)) {
-        return this.width
-      }
-      return `${this.width}${DEFAULT_UNIT}`
+      return `${this.width}${this.unit}`
     },
     realContentHeight() {
-      if (isString(this.contentHeight)) {
-        return this.contentHeight
-      }
-      return `${this.contentHeight}${DEFAULT_UNIT}`
+      return `${this.contentHeight}${this.unit}`
     },
     realSize() {
-      if (isString(this.size)) {
-        return this.size
-      }
-      return `${this.size}${DEFAULT_UNIT}`
+      return `${this.size}${this.unit}`
     },
     realGutter() {
-      if (isString(this.gutter)) {
-        return this.gutter
-      }
-      return `${this.gutter}${DEFAULT_UNIT}`
+      return `${this.gutter}${this.unit}`
     },
     realOffset() {
-      if (isString(this.offset)) {
-        return this.offset
-      }
-      return `${this.offset}${DEFAULT_UNIT}`
+      return `${this.offset}${this.unit}`
     }
   },
   mounted() {
