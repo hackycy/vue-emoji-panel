@@ -4,7 +4,7 @@
       <div
         class="emoji-popover"
         :class="[emojiClass]"
-        :style="{ width: realWidth, '--arrow-size': realArrowSize }"
+        :style="{ width: realWidth }"
       >
         <!-- emoji pane -->
       </div>
@@ -29,19 +29,19 @@ export default {
       required: true
     },
     width: {
-      type: [Number, String],
+      type: Number,
       default: 410
     },
     contentHeight: {
-      type: [Number, String],
+      type: Number,
       default: 270
     },
     size: {
-      type: [Number, String],
+      type: Number,
       default: 28
     },
     gutter: {
-      type: [Number, String],
+      type: Number,
       default: 10
     },
     recentlyUsed: {
@@ -74,8 +74,12 @@ export default {
       default: true
     },
     offset: {
-      type: [Number, String],
+      type: Number,
       default: 0
+    },
+    unit: {
+      type: String,
+      default: 'px'
     }
   },
   computed: {
