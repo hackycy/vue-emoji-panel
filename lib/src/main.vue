@@ -44,11 +44,6 @@ export default {
       type: String,
       default: null
     },
-    placement: {
-      type: String,
-      default: 'top',
-      validator: (value) => ['top', 'bottom'].indexOf(value) > -1
-    },
     unit: {
       type: String,
       default: 'px'
