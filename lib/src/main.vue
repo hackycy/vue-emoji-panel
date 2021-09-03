@@ -1,6 +1,7 @@
 <template>
   <div
     class="emoji-panel"
+    :class="[panelClass]"
     :style="{ width: realWidth }"
   >
     <div class="emoji-panel__main">
@@ -55,6 +56,10 @@ export default {
     unit: {
       type: String,
       default: 'px'
+    },
+    panelClass: {
+      type: String,
+      default: null
     }
   },
   computed: {

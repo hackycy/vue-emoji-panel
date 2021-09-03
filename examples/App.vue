@@ -10,6 +10,7 @@
         :emojis="emojis"
         :col-limit="9"
         :spacing="12"
+        panel-class="panel"
         @emoji-click="handleEmojiClick"
       />
     </div>
@@ -52,13 +53,22 @@ body {
   margin-top: 60px;
 
   .demo-emoji {
+    position: relative;
     margin: auto;
     width: 400px;
     display: flex;
-    justify-content: center;
     height: 150px;
     overflow-y: auto;
+
+    padding: 20px;
     border: 1px solid #ccc;
+
+    .panel {
+      // display: inline-block;
+      // margin: 10px;
+      // min-height: 100%;
+      margin: auto;
+    }
   }
 }
 </style>
