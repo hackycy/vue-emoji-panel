@@ -8,6 +8,8 @@ import EmojiPanel from '../lib'
 
 Vue.use(EmojiPanel)
 
+import './emojis'
+
 new Vue({
   render: (h) => h(App)
 }).$mount('#app')

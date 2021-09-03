@@ -5,20 +5,30 @@
       src="./assets/logo.png"
     >
     <br>
-    <emoji-panel
-      :visible="visible"
-      :emojis="emojis"
-      emoji-class="demo-emoji"
-    />
+    <div class="demo-emoji">
+      <emoji-panel
+        :emojis="emojis"
+        :col-limit="9"
+        :spacing="12"
+        @emoji-click="handleEmojiClick"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import { emojis } from '@/emojis'
+
 export default {
   name: 'App',
   data() {
     return {
-      emojis: []
+      emojis: Object.freeze(emojis)
+    }
+  },
+  methods: {
+    handleEmojiClick(item, index) {
+      console.log(item, index)
     }
   }
 }
@@ -43,7 +53,12 @@ body {
 
   .demo-emoji {
     margin: auto;
-    border: 1px solid $border-color;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
   }
 }
 </style>
