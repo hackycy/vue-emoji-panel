@@ -18,19 +18,14 @@ export default {
   name: 'App',
   data() {
     return {
-      visible: false,
       emojis: []
-    }
-  },
-  methods: {
-    handleClick() {
-      this.visible = !this.visible
     }
   }
 }
 </script>
 
 <style lang="scss">
+$border-color: #070808;
 // reset
 html,
 body {
@@ -48,6 +43,7 @@ body {
 
   .demo-emoji {
     margin: auto;
+    border: 1px solid $border-color;
   }
 }
 </style>

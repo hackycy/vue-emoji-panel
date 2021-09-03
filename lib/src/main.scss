@@ -1,22 +1,16 @@
-.ep-fade-in-linear-enter-active,
-.ep-fade-in-linear-leave-active {
-  transition: opacity 200ms linear;
-}
-.ep-fade-in-linear-enter,
-.ep-fade-in-linear-leave,
-.ep-fade-in-linear-leave-active {
-  opacity: 0;
-}
-
-$border-color: #ebeef5;
-
 .emoji-panel {
   position: relative;
-  background: #FFFFFF;
-  border-radius: 4px;
-  border: 1px solid $border-color;
-  padding: 4px;
+  background: #ffffff;
   overflow: hidden;
+
+  &__main {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &__reference {
     &:focus:not(.focusing), &:focus:hover {
