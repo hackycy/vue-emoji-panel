@@ -89,14 +89,6 @@ export default {
     },
     realSpacing() {
       return `${this.spacing}${this.unit}`
-    },
-    remainItemCount() {
-      // 计算最后一行需要补位的个数
-      const total = this.emojis.length
-      if (total <= 0) {
-        return
-      }
-      return this.colLimit - (total % this.colLimit)
     }
   },
   methods: {
