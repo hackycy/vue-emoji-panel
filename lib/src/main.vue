@@ -70,7 +70,12 @@ export default {
   },
   data() {
     return {
-      hasMoving: false
+      tapStartTime: 0,
+      tapEndTime: 0,
+      tapStartClientX: 0,
+      tapStartClientY: 0,
+      tapEndClientX: 0,
+      tapEndClientY: 0
     }
   },
   computed: {
@@ -126,14 +131,14 @@ export default {
     handleItemClick(item, index) {
       this.$emit('emoji-click', item, index)
     },
-    onTouchStart() {
-      console.log('onTouchStart')
+    onTouchStart(e) {
+      this.tapStartTime = e.timeStamp
     },
-    onTouchEnd() {
-      console.log('onTouchEnd: ' + Date.now())
+    onTouchEnd(e) {
+      this.tapEndTime = e.timeStamp
     },
-    onTouchMove() {
-      console.log('onTouchMove')
+    onTouchMove(e) {
+      console.log(e)
     }
   }
 }
