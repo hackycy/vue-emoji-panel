@@ -1,14 +1,13 @@
 <template>
   <div
-    class="emoji-panel"
-    :class="[panelClass]"
+    :class="[panelClass, 'emoji-panel']"
     :style="{ width: realWidth }"
   >
     <div class="emoji-panel__main">
       <span
         v-for="(item, index) in emojis"
         :key="'emoji-' + index"
-        class="emoji-panel__main-item"
+        :class="[emojiClass, 'emoji-panel__main-item']"
         :style="{
           width: realSize,
           height: realSize,
@@ -16,6 +15,9 @@
           marginBottom: calcMarginBottom(index)
         }"
         @click="handleItemClick(item, index)"
+        @touchstart="onTouchStart"
+        @touchmove="onTouchMove"
+        @touchend="(e) => onTouchEnd(e, item, index)"
       >
         <img :src="item">
       </span>
@@ -60,6 +62,15 @@ export default {
     panelClass: {
       type: String,
       default: null
+    },
+    emojiClass: {
+      type: String,
+      default: null
+    }
+  },
+  data() {
+    return {
+      hasMoving: false
     }
   },
   computed: {
@@ -114,6 +125,15 @@ export default {
     },
     handleItemClick(item, index) {
       this.$emit('emoji-click', item, index)
+    },
+    onTouchStart() {
+      console.log('onTouchStart')
+    },
+    onTouchEnd() {
+      console.log('onTouchEnd: ' + Date.now())
+    },
+    onTouchMove() {
+      console.log('onTouchMove')
     }
   }
 }

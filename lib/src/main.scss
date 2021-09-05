@@ -12,18 +12,19 @@
       user-select: none;
       -webkit-user-select: none;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-touch-callout: none; // 禁用默认菜单
 
       img {
         width: 100%;
         height: 100%;
-        transition: transform .3s;
+        // transition: transform .3s;
       }
 
-      @media (any-hover: hover) {
-        img:hover {
-          transform: scale(1.2);
-        }
-      }
+      // @media (any-hover: hover) {
+      //   img:hover {
+      //     transform: scale(1.2);
+      //   }
+      // }
 
       &:hover {
         cursor: pointer;
