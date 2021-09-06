@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { isString } from './util'
+import { isString, TAP_TIMESTAMP, SLIDE_OFFSET, preventDefault } from './util'
 
 export default {
   name: 'EmojiPanel',
@@ -71,11 +71,10 @@ export default {
   data() {
     return {
       tapStartTime: 0,
-      tapEndTime: 0,
       tapStartClientX: 0,
       tapStartClientY: 0,
-      tapEndClientX: 0,
-      tapEndClientY: 0
+      // 判断是否取消单击（手指按下偏移时）
+      cancelTap: false
     }
   },
   computed: {
@@ -132,13 +131,34 @@ export default {
       this.$emit('emoji-click', item, index)
     },
     onTouchStart(e) {
+      if (this.cancelTap) {
+        // 重置状态
+        this.cancelTap = false
+      }
       this.tapStartTime = e.timeStamp
+      const touch = e.changedTouches[0]
+      this.tapStartClientX = touch.clientX
+      this.tapStartClientY = touch.clientY
     },
-    onTouchEnd(e) {
-      this.tapEndTime = e.timeStamp
+    onTouchEnd(e, item, index) {
+      const tapEndTime = e.timeStamp
+      // 阻止冒泡 click事件
+      preventDefault(e)
+      if (!this.cancelTap && tapEndTime - this.tapStartTime <= TAP_TIMESTAMP) {
+        this.handleItemClick(item, index)
+      }
     },
     onTouchMove(e) {
-      console.log(e)
+      const touch = e.changedTouches[0]
+      const tapEndClientX = touch.clientX
+      const tapEndClientY = touch.clientY
+      // 滑动偏移量 超出15时则取消
+      if (
+        Math.abs(this.tapStartClientX - tapEndClientX) > SLIDE_OFFSET ||
+        Math.abs(this.tapStartClientY - tapEndClientY) > SLIDE_OFFSET
+      ) {
+        this.cancelTap = true
+      }
     }
   }
 }
