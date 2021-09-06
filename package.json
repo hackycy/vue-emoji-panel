@@ -15,7 +15,6 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "@popperjs/core": "^2.9.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -31,6 +30,7 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
+    "vue-popperjs": "^2.3.0",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
