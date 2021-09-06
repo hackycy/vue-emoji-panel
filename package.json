@@ -1,10 +1,13 @@
 {
   "name": "vue-emoji-panel",
   "version": "0.0.1",
+  "description": "A Emoji Component for Vue.js.",
+  "main": "dist/emoji-panel.common.js",
   "scripts": {
     "demo": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name EmojiPanel lib/index.js",
+    "build": "vue-cli-service build --target lib --name emoji-panel lib/index.js",
     "prebuild": "rimraf dist",
+    "publish": "npm run prebuild && npm run build && npm publish --access public",
     "lint": "vue-cli-service lint src examples",
     "inspect": "vue inspect > webpack-config.txt"
   },
