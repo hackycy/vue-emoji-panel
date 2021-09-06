@@ -1,6 +1,6 @@
 {
   "name": "vue-emoji-panel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Emoji Component for Vue.js.",
   "main": "dist/emoji-panel.common.js",
   "scripts": {
