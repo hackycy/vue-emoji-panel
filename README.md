@@ -1,6 +1,43 @@
 # vue-emoji-panel
 
-一个基于Vue2编写的表情选择面板组件
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: https://img.shields.io/npm/v/vue-emoji-panel.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/vue-emoji-panel
+[download-image]: https://img.shields.io/npm/dm/vue-emoji-panel.svg?style=flat-square
+[download-url]: https://npmjs.org/package/vue-emoji-panel
+
+一个基于Vue编写的表情选择面板组件
+
+## 安装
+
+``` bash
+npm i --save vue-emoji-panel
+```
+
+## 使用
+
+``` javascript
+// main.js
+import Vue from 'vue'
+import App from './App.vue'
+
+Vue.config.productionTip = false
+
+// 引入样式
+import 'emoji-panel/dist/emoji-panel.css'
+import EmojiPanel from 'vue-emoji-panel'
+
+// 注册
+Vue.use(EmojiPanel)
+
+new Vue({
+  render: (h) => h(App)
+}).$mount('#app')
+```
+
+> 更细粒度使用请查看[examples](examples)
 
 ## 组件属性
 
