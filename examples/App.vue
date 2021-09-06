@@ -14,6 +14,31 @@
         @emoji-click="handleEmojiClick"
       />
     </div>
+    <popper
+      trigger="clickToToggle"
+      :options="{
+        placement: 'bottom',
+        modifiers: { offset: { offset: '0,10px' } }
+      }"
+    >
+      <emoji-panel
+        :emojis="emojis"
+        :col-limit="9"
+        :width="15"
+        :size="1.2"
+        :spacing="0.4"
+        panel-class="panel2"
+        unit="rem"
+        @emoji-click="handleEmojiClick"
+      />
+
+      <div
+        slot="reference"
+        class="demo-emoji2"
+      >
+        <button>弹窗选择</button>
+      </div>
+    </popper>
   </div>
 </template>
 
@@ -24,7 +49,8 @@ export default {
   name: 'App',
   data() {
     return {
-      emojis: Object.freeze(emojis)
+      emojis: Object.freeze(emojis),
+      panel2Hidden: false
     }
   },
   methods: {
@@ -69,6 +95,16 @@ body {
       // min-height: 100%;
       margin: auto;
     }
+  }
+
+  .demo-emoji2 {
+    margin-top: 20px;
+  }
+
+  .panel2 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
 </style>
