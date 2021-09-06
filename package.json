@@ -7,7 +7,7 @@
     "demo": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name emoji-panel lib/index.js",
     "prebuild": "rimraf dist",
-    "publish": "npm run prebuild && npm run build && npm publish --access public",
+    "release": "npm run prebuild && npm run build && npm publish",
     "lint": "vue-cli-service lint src examples",
     "inspect": "vue inspect > webpack-config.txt"
   },
