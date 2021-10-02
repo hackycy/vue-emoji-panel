@@ -51,10 +51,6 @@ export default {
       type: Number,
       default: 8
     },
-    recentlyUsed: {
-      type: Boolean,
-      default: true
-    },
     unit: {
       type: String,
       default: 'px'
